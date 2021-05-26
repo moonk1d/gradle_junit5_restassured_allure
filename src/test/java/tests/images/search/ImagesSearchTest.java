@@ -19,7 +19,7 @@ public class ImagesSearchTest {
   @ValueSource(strings = {"small", "med", "full", "thumb"})
   @DisplayName("Images search with Size param: ")
   public void size(String size) {
-    service.imagesSearch.search("size", size);
+    service.imagesSearch.search("size", size).statusCode(200);
   }
 
   @ParameterizedTest(name = "{displayName} [{index}] mime type [{0}]")
